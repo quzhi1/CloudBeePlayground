@@ -73,8 +73,8 @@ func getApiKey() string {
 
 func flagEnabled(flags Flags, ctx context.Context) {
 	if flags.EnableTutorial.IsEnabled(ctx) {
-		fmt.Printf("EnableTutorial flag is enabled for context flag_attribute_a == %s\n", ctx.Get("flag_attribute_a"))
+		fmt.Printf("EnableTutorial flag is true for context flag_attribute_a == %s\n", ctx.Get("flag_attribute_a"))
 	} else {
-		fmt.Printf("EnableTutorial flag is not enabled for context flag_attribute_a == %s\n", ctx.Get("flag_attribute_a"))
+		fmt.Printf("EnableTutorial flag is false for context flag_attribute_a == %s\n", ctx.Get("flag_attribute_a"))
 	}
 }
