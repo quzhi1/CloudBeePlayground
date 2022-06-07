@@ -8,12 +8,12 @@ import (
 	"github.com/rollout/rox-go/v5/server"
 )
 
-type Flags struct{}
+// type Flags struct{}
 
 func main() {
 	// Init rox
 	rox := server.NewRox()
-	rox.RegisterWithEmptyNamespace(Flags{})
+	// rox.RegisterWithEmptyNamespace(Flags{})
 	<-rox.Setup(getApiKey(), server.NewRoxOptions(server.RoxOptionsBuilder{}))
 	defer rox.Shutdown()
 
